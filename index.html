@@ -35,10 +35,29 @@
       property="og:description"
       content="Portfólio de Silas Henrique, desenvolvedor front-end com 4+ anos de experiência."
     />
-    <script type="module" crossorigin src="/silas-henrique/assets/index-18nHfhr5.js"></script>
+    <script type="module" crossorigin src="/silas-henrique/assets/index-D24Na8OX.js"></script>
     <link rel="stylesheet" crossorigin href="/silas-henrique/assets/index-CQ67LSur.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function () {
+        const query = window.location.search.substring(1);
+        const target = query.split('&')[0].replace(/~and~/g, '&');
+
+        if (target) {
+          window.history.replaceState(
+            null,
+            null,
+            window.location.pathname.slice(0, -1) +
+              (target ? '/' + target : '') +
+              window.location.search
+                .replace('?' + query, '')
+                .replace(/\?&/, '?') +
+              window.location.hash
+          );
+        }
+      })();
+    </script>
   </body>
 </html>

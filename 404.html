@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Single Page App routing fix for GitHub Pages
+      // Credits: https://github.com/rafgraph/spa-github-pages
+      const pathSegmentsToKeep = 1; // Change to 0 if using custom domain
+
+      const l = window.location;
+      const repoName = l.pathname.split('/')[1];
+
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (repoName ? '/' + repoName : '') +
+          '/?' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
