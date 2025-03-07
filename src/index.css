@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-family: 'Martian Mono', monospace;
+  --color-darkBrown: #5c3d2e;
+  --color-terracotta: #d35400;
+  --color-goldenYellow: #ffb400;
+  --color-sunsetOrange: #ff7043;
+  --color-cream: #fff5e1;
+}
+
+body {
+  font-family: var(--font-family);
+}
