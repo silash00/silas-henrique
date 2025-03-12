@@ -1,9 +1,14 @@
 import imageUrl from '/profile.png';
+import { motion } from 'framer-motion';
 
 export default function ProfileCard() {
   return (
     <section className="p-8 min-h-dvh relative grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
-      <div className="space-y-4 ">
+      <motion.div
+        initial={{ x: -100, opacity: 0, scale: 0.5, speed: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1, speed: 0.5 }}
+        className="space-y-4 "
+      >
         <h1>Olá!</h1>
         <h2>
           Me chamo Silas Henrique, sou desenvolvedor front-end com mais de 4
@@ -44,15 +49,20 @@ export default function ProfileCard() {
             LinkedIn
           </a>
         </p>
-      </div>
-      <div className="flex justify-center">
+      </motion.div>
+      <motion.div
+        initial={{ x: 100, opacity: 0, scale: 0.5, speed: 0.1 }}
+        animate={{ x: 0, opacity: 1, scale: 1, speed: 0.5 }}
+        exit={{}}
+        className="flex justify-center"
+      >
         <img
           className="rounded-lg aspect-auto w-64"
           src={imageUrl}
           alt="Silas Henrique
         "
         />
-      </div>
+      </motion.div>
     </section>
   );
 }
