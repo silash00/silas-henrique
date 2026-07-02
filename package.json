@@ -1,5 +1,5 @@
 {
-  "homepage": "https://silash00.github.io/silas-henrique",
+  "homepage": "https://silashenrique.dev",
   "name": "silas-henrique",
   "private": true,
   "version": "0.0.0",
@@ -10,9 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "dependencies": {
     "@headlessui/react": "^2.2.10",
@@ -33,7 +31,6 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
-    "gh-pages": "^6.3.0",
     "globals": "^17.7.0",
     "prettier": "^3.9.4",
     "typescript": "^6.0.3",

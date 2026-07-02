@@ -6,7 +6,7 @@
     <script>
       // Single Page App routing fix for GitHub Pages
       // Credits: https://github.com/rafgraph/spa-github-pages
-      const pathSegmentsToKeep = 1; // Change to 0 if using custom domain
+      const pathSegmentsToKeep = 0; // 0 for custom domain / apex (served at root)
 
       const l = window.location;
       const repoName = l.pathname.split('/')[1];
