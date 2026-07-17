@@ -1,5 +1,5 @@
-import { pitch } from './sharedPitch';
-import LabContainer from './LabContainer';
+import { pitch } from '../../data/pitch';
+import SectionContainer from './SectionContainer';
 import { useT } from '../../i18n/useT';
 
 const btnClass =
@@ -21,28 +21,28 @@ export default function MemphisContact() {
         hi
       </p>
 
-      <LabContainer className="relative z-10">
+      <SectionContainer className="relative z-10">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-8">
           <div className="flex flex-col lg:col-span-5">
             <h2 className="mp-font-display text-[clamp(2.25rem,5.5vw,3.75rem)] font-bold leading-[0.92] tracking-tight">
-              {t('lab.contact.title')}
+              {t('contact.title')}
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-[color:var(--mp-contact-muted)]">
-              {t('lab.contact.intro')}
+              {t('contact.intro')}
             </p>
             <p className="mt-3 max-w-md text-base leading-relaxed text-[color:var(--mp-contact-muted)]">
-              {t('lab.contact.introMore')}
+              {t('contact.introMore')}
             </p>
 
             <a href={`mailto:${pitch.email}`} className={`mt-8 ${btnClass}`}>
-              {t('lab.contact.write')}
+              {t('contact.write')}
             </a>
           </div>
 
           <div className="flex flex-col gap-10 lg:col-span-7 lg:border-l-[3px] lg:border-[color:var(--mp-contact-fg)] lg:pl-10">
             <div>
               <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--mp-contact-soft)]">
-                {t('lab.contact.also')}
+                {t('contact.also')}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -66,7 +66,7 @@ export default function MemphisContact() {
 
             <div className="flex flex-wrap items-end justify-between gap-4 border-t-[3px] border-[color:var(--mp-contact-fg)] pt-6">
               <p className="max-w-sm text-sm leading-relaxed text-[color:var(--mp-contact-muted)]">
-                {t('lab.contact.footer')}
+                {t('contact.footer')}
               </p>
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--mp-contact-soft)]">
                 {pitch.name}
@@ -74,7 +74,7 @@ export default function MemphisContact() {
             </div>
           </div>
         </div>
-      </LabContainer>
+      </SectionContainer>
     </section>
   );
 }

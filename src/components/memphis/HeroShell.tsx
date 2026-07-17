@@ -14,7 +14,7 @@ export default function HeroShell({
   return (
     <section
       id={id}
-      data-lab-hero
+      data-hero
       className={`relative h-dvh w-full overflow-hidden snap-start ${className}`}
     >
       {children}

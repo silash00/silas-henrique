@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { usePrefersReducedMotion } from './usePrefersReducedMotion';
+import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 
 type MacWindowProps = {
   title: string;

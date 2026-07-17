@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MacWindow from './MacWindow';
-import LabContainer from './LabContainer';
-import { pitch } from './sharedPitch';
+import SectionContainer from './SectionContainer';
+import { pitch } from '../../data/pitch';
 import { useT } from '../../i18n/useT';
 import type { MessageKey } from '../../i18n';
 
@@ -9,7 +9,7 @@ const WORKS = [
   {
     id: 'trips',
     title: 'busca.trips.app',
-    blurbKey: 'lab.works.trips.blurb' satisfies MessageKey,
+    blurbKey: 'works.trips.blurb' satisfies MessageKey,
     tags: 'React · Next',
     href: pitch.linkedin,
     accent: 'teal' as const,
@@ -19,7 +19,7 @@ const WORKS = [
   {
     id: 'checkout',
     title: 'checkout.flow',
-    blurbKey: 'lab.works.checkout.blurb' satisfies MessageKey,
+    blurbKey: 'works.checkout.blurb' satisfies MessageKey,
     tags: 'TypeScript',
     href: pitch.linkedin,
     accent: 'pink' as const,
@@ -29,7 +29,7 @@ const WORKS = [
   {
     id: 'landing',
     title: 'brand.landing',
-    blurbKey: 'lab.works.landing.blurb' satisfies MessageKey,
+    blurbKey: 'works.landing.blurb' satisfies MessageKey,
     tags: 'Front-end',
     href: pitch.linkedin,
     accent: 'yellow' as const,
@@ -39,7 +39,7 @@ const WORKS = [
   {
     id: 'tools',
     title: 'ops.internal',
-    blurbKey: 'lab.works.tools.blurb' satisfies MessageKey,
+    blurbKey: 'works.tools.blurb' satisfies MessageKey,
     tags: 'Product UI',
     href: `mailto:${pitch.email}`,
     accent: 'teal' as const,
@@ -58,14 +58,14 @@ export default function MemphisMore() {
       className="relative overflow-visible border-t border-[color:var(--mp-grid)] text-[color:var(--mp-ink)]"
     >
       <div aria-hidden className="mp-works-texture pointer-events-none absolute inset-0" />
-      <LabContainer className="relative z-10 pt-14 md:pt-20">
+      <SectionContainer className="relative z-10 pt-14 md:pt-20">
         <h2 className="mp-font-display max-w-[14ch] text-[clamp(2.25rem,6vw,4rem)] font-bold leading-[0.92] tracking-tight">
-          {t('lab.works.title')}
+          {t('works.title')}
         </h2>
         <p className="mt-4 max-w-md text-base leading-relaxed text-[color:var(--mp-muted)]">
-          {t('lab.works.intro')}
+          {t('works.intro')}
         </p>
-      </LabContainer>
+      </SectionContainer>
 
       <div
         className="relative z-10 mx-auto grid w-full max-w-5xl grid-cols-1 justify-items-center gap-8 overflow-visible px-5 py-12 sm:px-8 md:grid-cols-2 md:gap-x-12 md:gap-y-10 md:px-10 md:py-16"

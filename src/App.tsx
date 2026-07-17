@@ -1,17 +1,14 @@
-import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { LocaleProvider } from './context/LocaleContext';
-import AppRoutes from './routes';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <ThemeProvider>
-        <LocaleProvider>
-          <AppRoutes />
-        </LocaleProvider>
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider>
+      <LocaleProvider>
+        <HomePage />
+      </LocaleProvider>
+    </ThemeProvider>
   );
 }
 

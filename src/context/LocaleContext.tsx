@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { LocaleContext, type Locale } from './locale';
-import { resolveLocaleFromNavigator } from '../i18n';
+import { messages, resolveLocaleFromNavigator } from '../i18n';
 
 const STORAGE_KEY = 'locale';
 
@@ -10,13 +10,20 @@ function readStoredLocale(): Locale | null {
   return null;
 }
 
+function syncDocumentMeta(locale: Locale) {
+  document.documentElement.lang = locale;
+  document.title = messages[locale]['seo.title'];
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute('content', messages[locale]['seo.description']);
+}
+
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(() => {
     return readStoredLocale() ?? resolveLocaleFromNavigator();
   });
 
   useEffect(() => {
-    document.documentElement.lang = locale;
+    syncDocumentMeta(locale);
   }, [locale]);
 
   const setLocale = (next: Locale) => {

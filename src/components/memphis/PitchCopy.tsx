@@ -1,16 +1,16 @@
 import type { Ref } from 'react';
-import { pitch } from './sharedPitch';
+import { pitch } from '../../data/pitch';
 import { useT } from '../../i18n/useT';
 import type { MessageKey } from '../../i18n';
 
 const KEYWORD_KEYS = [
-  'lab.hero.keyword.digitalProducts',
-  'lab.hero.keyword.frontend',
-  'lab.hero.keyword.ai',
-  'lab.hero.keyword.n8n',
-  'lab.hero.keyword.rag',
-  'lab.hero.keyword.dashboards',
-  'lab.hero.keyword.pwas',
+  'hero.keyword.digitalProducts',
+  'hero.keyword.frontend',
+  'hero.keyword.ai',
+  'hero.keyword.n8n',
+  'hero.keyword.rag',
+  'hero.keyword.dashboards',
+  'hero.keyword.pwas',
 ] as const satisfies readonly MessageKey[];
 
 const KEYWORD_ACCENTS = [
@@ -25,7 +25,7 @@ type PitchCopyProps = {
   keywordsClassName?: string;
   ctaClassName?: string;
   linkClassName?: string;
-  nameRef?: Ref<HTMLParagraphElement>;
+  nameRef?: Ref<HTMLHeadingElement>;
 };
 
 export default function PitchCopy({
@@ -40,10 +40,12 @@ export default function PitchCopy({
 
   return (
     <div className="relative z-10 max-w-3xl">
-      <p ref={nameRef} className={`mp-font-display ${nameClassName}`}>
+      <h1 ref={nameRef} className={`mp-font-display ${nameClassName}`}>
         {pitch.name}
+      </h1>
+      <p className={`mp-font-accent ${headlineClassName}`}>
+        {t('hero.headline')}
       </p>
-      <h1 className={`mp-font-accent ${headlineClassName}`}>{t('lab.hero.headline')}</h1>
       <p className={keywordsClassName}>
         {KEYWORD_KEYS.map((key, i) => (
           <span key={key} className="inline-flex items-center">
@@ -67,10 +69,10 @@ export default function PitchCopy({
       </p>
       <div className={ctaClassName}>
         <a className={linkClassName} href="#memphis-more">
-          {t('lab.hero.cta.works')}
+          {t('hero.cta.works')}
         </a>
         <a className={linkClassName} href="#memphis-contact">
-          {t('lab.hero.cta.contact')}
+          {t('hero.cta.contact')}
         </a>
       </div>
     </div>

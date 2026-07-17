@@ -2,16 +2,16 @@ import { useRef, type CSSProperties } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { AnimatePresence, motion } from 'framer-motion';
-import HeroShell from '../HeroShell';
-import PitchCopy from '../PitchCopy';
-import LabContainer from '../LabContainer';
-import { usePrefersReducedMotion } from '../usePrefersReducedMotion';
-import { useInView } from '../useInView';
+import HeroShell from './HeroShell';
+import PitchCopy from './PitchCopy';
+import SectionContainer from './SectionContainer';
+import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
+import { useInView } from '../../hooks/useInView';
 import {
   useMemphisPhysics,
   type FloaterSpawn,
-} from '../useMemphisPhysics';
-import { useT } from '../../../i18n/useT';
+} from '../../hooks/useMemphisPhysics';
+import { useT } from '../../i18n/useT';
 import {
   AiIcon,
   BracesIcon,
@@ -59,7 +59,7 @@ const SPAWNS: readonly FloaterSpawn[] = [
 
 export default function MemphisPop() {
   const root = useRef<HTMLDivElement>(null);
-  const nameRef = useRef<HTMLParagraphElement>(null);
+  const nameRef = useRef<HTMLHeadingElement>(null);
   const introPlayed = useRef(false);
   const reduced = usePrefersReducedMotion();
   const inView = useInView(root);
@@ -163,8 +163,7 @@ export default function MemphisPop() {
           return (
             <div
               key={b.id}
-              role="img"
-              aria-label={b.id}
+              aria-hidden
               className={`absolute touch-none select-none ${
                 b.dragging ? 'z-30 cursor-grabbing' : 'z-[5] cursor-grab'
               } ${b.flipped ? 'mp-flipped' : ''}`}
@@ -213,7 +212,7 @@ export default function MemphisPop() {
           })}
 
         <div className="mp-copy pointer-events-none relative z-10 w-full">
-          <LabContainer className="[&_a]:pointer-events-auto">
+          <SectionContainer className="[&_a]:pointer-events-auto">
             <PitchCopy
               nameRef={nameRef}
               nameClassName="max-w-[12ch] text-[clamp(2.75rem,9vw,6.5rem)] font-bold leading-[0.9] tracking-tight text-[color:var(--mp-ink)]"
@@ -222,7 +221,7 @@ export default function MemphisPop() {
               ctaClassName="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm font-semibold"
               linkClassName="underline decoration-[color:var(--mp-teal)]/40 underline-offset-4 transition hover:decoration-[color:var(--mp-pink)] hover:text-[color:var(--mp-pink)]"
             />
-          </LabContainer>
+          </SectionContainer>
         </div>
 
         <AnimatePresence>
@@ -239,7 +238,7 @@ export default function MemphisPop() {
                 onClick={dismissEgg}
                 className="flex items-center gap-3"
               >
-                {t('lab.egg.sparkName')}
+                {t('egg.sparkName')}
                 <span className="opacity-50">✕</span>
               </button>
             </motion.div>
