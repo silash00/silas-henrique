@@ -1,4 +1,5 @@
 import { useTheme } from '../context/useTheme';
+import { useT } from '../i18n/useT';
 import { LuMoon, LuSun } from 'react-icons/lu';
 import { Switch } from '@headlessui/react';
 
@@ -8,6 +9,7 @@ interface ThemeToggleProps {
 
 export default function ThemeToggle({ className }: ThemeToggleProps) {
   const { isDarkMode, toggleDarkMode } = useTheme();
+  const t = useT();
 
   return (
     <div className={className}>
@@ -25,7 +27,7 @@ export default function ThemeToggle({ className }: ThemeToggleProps) {
         <Switch
           checked={isDarkMode}
           onChange={toggleDarkMode}
-          aria-label="Toggle theme"
+          aria-label={t('theme.toggle')}
           className="group inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-110 data-[checked]:bg-gray-400"
         >
           <span className="size-4 translate-x-1 rounded-full bg-cream transition group-data-[checked]:translate-x-6" />
