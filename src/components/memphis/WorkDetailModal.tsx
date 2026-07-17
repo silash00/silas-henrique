@@ -23,7 +23,10 @@ const ACCENT = {
 
 const TECH_ACCENTS: WorkAccent[] = ['pink', 'teal', 'yellow'];
 
-export default function WorkDetailModal({ work, onClose }: WorkDetailModalProps) {
+export default function WorkDetailModal({
+  work,
+  onClose,
+}: WorkDetailModalProps) {
   const t = useT();
   const reduced = usePrefersReducedMotion();
   const open = work !== null;
@@ -42,7 +45,9 @@ export default function WorkDetailModal({ work, onClose }: WorkDetailModalProps)
               initial={
                 reduced ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 12 }
               }
-              animate={reduced ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
+              animate={
+                reduced ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }
+              }
               transition={{
                 duration: reduced ? 0.12 : 0.22,
                 ease: [0.22, 1, 0.36, 1],
@@ -166,11 +171,5 @@ function WorkMedia({ work }: { work: WorkItem }) {
     );
   }
 
-  return (
-    <img
-      className="h-auto w-full"
-      src={media.thumb}
-      alt={alt}
-    />
-  );
+  return <img className="h-auto w-full" src={media.thumb} alt={alt} />;
 }

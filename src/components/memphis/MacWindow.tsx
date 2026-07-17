@@ -154,8 +154,14 @@ export function WindowPlaceholder({
       <div className="grid flex-1 grid-cols-3 gap-2">
         <div className="col-span-1 space-y-2 border-2 border-[color:var(--mp-ink)] bg-[color:var(--mp-surface)] p-2">
           <div className="mp-ph-line h-2 w-3/4 bg-[color:var(--mp-ink)]/25" />
-          <div className="mp-ph-line h-2 w-full bg-[color:var(--mp-ink)]/15" style={{ animationDelay: '120ms' }} />
-          <div className="mp-ph-line h-2 w-5/6 bg-[color:var(--mp-ink)]/15" style={{ animationDelay: '240ms' }} />
+          <div
+            className="mp-ph-line h-2 w-full bg-[color:var(--mp-ink)]/15"
+            style={{ animationDelay: '120ms' }}
+          />
+          <div
+            className="mp-ph-line h-2 w-5/6 bg-[color:var(--mp-ink)]/15"
+            style={{ animationDelay: '240ms' }}
+          />
           <div className="mp-ph-block mt-3 h-8 border-2 border-[color:var(--mp-ink)] bg-[color:var(--mp-yellow)]" />
         </div>
         <div className="col-span-2 grid grid-rows-2 gap-2">

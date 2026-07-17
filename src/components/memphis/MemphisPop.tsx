@@ -44,17 +44,105 @@ const ICONS = {
 
 const SPAWNS: readonly FloaterSpawn[] = [
   // Mobile: messy scatter hugging margins; center band kept clear for copy
-  { id: 'cursor', size: 0.11, xPct: 88, yPct: 10, xPctMobile: 89, yPctMobile: 4, rotate: -12 },
-  { id: 'braces', size: 0.12, xPct: 72, yPct: 28, xPctMobile: 98, yPctMobile: 27, rotate: 8 },
-  { id: 'browser', size: 0.14, xPct: 84, yPct: 72, xPctMobile: 84, yPctMobile: 91, rotate: 4 },
-  { id: 'terminal', size: 0.13, xPct: 14, yPct: 78, xPctMobile: 4, yPctMobile: 76, rotate: -6 },
-  { id: 'spark', size: 0.1, xPct: 42, yPct: 12, xPctMobile: 18, yPctMobile: 1, rotate: 18 },
-  { id: 'node', size: 0.12, xPct: 62, yPct: 58, xPctMobile: 96, yPctMobile: 68, rotate: -4 },
-  { id: 'ai', size: 0.11, xPct: 92, yPct: 42, xPctMobile: 82, yPctMobile: 39, rotate: 10 },
-  { id: 'flow', size: 0.13, xPct: 48, yPct: 82, xPctMobile: 16, yPctMobile: 96, rotate: -8 },
-  { id: 'chart', size: 0.11, xPct: 78, yPct: 50, xPctMobile: 99, yPctMobile: 12, rotate: -14 },
-  { id: 'phone', size: 0.1, xPct: 8, yPct: 36, xPctMobile: 1, yPctMobile: 52, rotate: 6 },
-  { id: 'docs', size: 0.12, xPct: 58, yPct: 18, xPctMobile: 3, yPctMobile: 21, rotate: -3 },
+  {
+    id: 'cursor',
+    size: 0.11,
+    xPct: 88,
+    yPct: 10,
+    xPctMobile: 89,
+    yPctMobile: 4,
+    rotate: -12,
+  },
+  {
+    id: 'braces',
+    size: 0.12,
+    xPct: 72,
+    yPct: 28,
+    xPctMobile: 98,
+    yPctMobile: 27,
+    rotate: 8,
+  },
+  {
+    id: 'browser',
+    size: 0.14,
+    xPct: 84,
+    yPct: 72,
+    xPctMobile: 84,
+    yPctMobile: 91,
+    rotate: 4,
+  },
+  {
+    id: 'terminal',
+    size: 0.13,
+    xPct: 14,
+    yPct: 78,
+    xPctMobile: 4,
+    yPctMobile: 76,
+    rotate: -6,
+  },
+  {
+    id: 'spark',
+    size: 0.1,
+    xPct: 42,
+    yPct: 12,
+    xPctMobile: 18,
+    yPctMobile: 1,
+    rotate: 18,
+  },
+  {
+    id: 'node',
+    size: 0.12,
+    xPct: 62,
+    yPct: 58,
+    xPctMobile: 96,
+    yPctMobile: 68,
+    rotate: -4,
+  },
+  {
+    id: 'ai',
+    size: 0.11,
+    xPct: 92,
+    yPct: 42,
+    xPctMobile: 82,
+    yPctMobile: 39,
+    rotate: 10,
+  },
+  {
+    id: 'flow',
+    size: 0.13,
+    xPct: 48,
+    yPct: 82,
+    xPctMobile: 16,
+    yPctMobile: 96,
+    rotate: -8,
+  },
+  {
+    id: 'chart',
+    size: 0.11,
+    xPct: 78,
+    yPct: 50,
+    xPctMobile: 99,
+    yPctMobile: 12,
+    rotate: -14,
+  },
+  {
+    id: 'phone',
+    size: 0.1,
+    xPct: 8,
+    yPct: 36,
+    xPctMobile: 1,
+    yPctMobile: 52,
+    rotate: 6,
+  },
+  {
+    id: 'docs',
+    size: 0.12,
+    xPct: 58,
+    yPct: 18,
+    xPctMobile: 3,
+    yPctMobile: 21,
+    rotate: -3,
+  },
 ] as const;
 
 export default function MemphisPop() {
@@ -98,7 +186,7 @@ export default function MemphisPop() {
           stagger: 0.045,
           ease: 'power2.out',
           delay: 0.08,
-        },
+        }
       );
 
       gsap.fromTo(
@@ -111,14 +199,14 @@ export default function MemphisPop() {
           stagger: 0.09,
           ease: 'power2.out',
           delay: 0.25,
-        },
+        }
       );
     },
     {
       scope: root,
       dependencies: [reduced, inView, bodies.length],
       revertOnUpdate: true,
-    },
+    }
   );
 
   return (

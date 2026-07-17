@@ -228,16 +228,87 @@ export function AiIcon({ className = '' }: IconProps) {
         stroke="var(--mp-icon-line)"
         strokeWidth="4"
       />
-      <circle cx="40" cy="40" r="10" fill="var(--mp-icon-fill)" stroke="var(--mp-icon-line)" strokeWidth="3" />
+      <circle
+        cx="40"
+        cy="40"
+        r="10"
+        fill="var(--mp-icon-fill)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+      />
       <circle cx="40" cy="40" r="4" fill="var(--mp-icon-line)" />
-      <line x1="40" y1="8" x2="40" y2="18" stroke="var(--mp-icon-line)" strokeWidth="4" strokeLinecap="round" />
-      <line x1="40" y1="62" x2="40" y2="72" stroke="var(--mp-icon-line)" strokeWidth="4" strokeLinecap="round" />
-      <line x1="8" y1="40" x2="18" y2="40" stroke="var(--mp-icon-line)" strokeWidth="4" strokeLinecap="round" />
-      <line x1="62" y1="40" x2="72" y2="40" stroke="var(--mp-icon-line)" strokeWidth="4" strokeLinecap="round" />
-      <line x1="16" y1="16" x2="24" y2="24" stroke="var(--mp-icon-teal)" strokeWidth="3" strokeLinecap="round" />
-      <line x1="64" y1="16" x2="56" y2="24" stroke="var(--mp-icon-yellow)" strokeWidth="3" strokeLinecap="round" />
-      <line x1="16" y1="64" x2="24" y2="56" stroke="var(--mp-icon-yellow)" strokeWidth="3" strokeLinecap="round" />
-      <line x1="64" y1="64" x2="56" y2="56" stroke="var(--mp-icon-teal)" strokeWidth="3" strokeLinecap="round" />
+      <line
+        x1="40"
+        y1="8"
+        x2="40"
+        y2="18"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <line
+        x1="40"
+        y1="62"
+        x2="40"
+        y2="72"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <line
+        x1="8"
+        y1="40"
+        x2="18"
+        y2="40"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <line
+        x1="62"
+        y1="40"
+        x2="72"
+        y2="40"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <line
+        x1="16"
+        y1="16"
+        x2="24"
+        y2="24"
+        stroke="var(--mp-icon-teal)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="64"
+        y1="16"
+        x2="56"
+        y2="24"
+        stroke="var(--mp-icon-yellow)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="16"
+        y1="64"
+        x2="24"
+        y2="56"
+        stroke="var(--mp-icon-yellow)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="64"
+        y1="64"
+        x2="56"
+        y2="56"
+        stroke="var(--mp-icon-teal)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -265,10 +336,38 @@ export function FlowIcon({ className = '' }: IconProps) {
         strokeLinecap="round"
         fill="none"
       />
-      <circle cx="18" cy="36" r="14" fill="var(--mp-icon-yellow)" stroke="var(--mp-icon-line)" strokeWidth="4" />
-      <circle cx="55" cy="22" r="10" fill="var(--mp-icon-teal)" stroke="var(--mp-icon-line)" strokeWidth="4" />
-      <circle cx="55" cy="50" r="10" fill="var(--mp-icon-pink)" stroke="var(--mp-icon-line)" strokeWidth="4" />
-      <circle cx="92" cy="36" r="14" fill="var(--mp-icon-fill)" stroke="var(--mp-icon-line)" strokeWidth="4" />
+      <circle
+        cx="18"
+        cy="36"
+        r="14"
+        fill="var(--mp-icon-yellow)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+      />
+      <circle
+        cx="55"
+        cy="22"
+        r="10"
+        fill="var(--mp-icon-teal)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+      />
+      <circle
+        cx="55"
+        cy="50"
+        r="10"
+        fill="var(--mp-icon-pink)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+      />
+      <circle
+        cx="92"
+        cy="36"
+        r="14"
+        fill="var(--mp-icon-fill)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="4"
+      />
       <path
         d="M48 36 C54 36 56 50 62 50"
         stroke="var(--mp-icon-line)"
@@ -301,9 +400,33 @@ export function ChartIcon({ className = '' }: IconProps) {
         stroke="var(--mp-icon-line)"
         strokeWidth="4"
       />
-      <rect x="18" y="42" width="14" height="22" fill="var(--mp-icon-pink)" stroke="var(--mp-icon-line)" strokeWidth="3" />
-      <rect x="38" y="28" width="14" height="36" fill="var(--mp-icon-teal)" stroke="var(--mp-icon-line)" strokeWidth="3" />
-      <rect x="58" y="18" width="14" height="46" fill="var(--mp-icon-yellow)" stroke="var(--mp-icon-line)" strokeWidth="3" />
+      <rect
+        x="18"
+        y="42"
+        width="14"
+        height="22"
+        fill="var(--mp-icon-pink)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+      />
+      <rect
+        x="38"
+        y="28"
+        width="14"
+        height="36"
+        fill="var(--mp-icon-teal)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+      />
+      <rect
+        x="58"
+        y="18"
+        width="14"
+        height="46"
+        fill="var(--mp-icon-yellow)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+      />
     </svg>
   );
 }
@@ -329,9 +452,29 @@ export function PhoneIcon({ className = '' }: IconProps) {
         strokeWidth="4"
       />
       <rect x="14" y="16" width="28" height="48" fill="var(--mp-icon-teal)" />
-      <rect x="20" y="74" width="16" height="4" rx="2" fill="var(--mp-icon-line)" />
-      <circle cx="40" cy="24" r="5" fill="var(--mp-icon-yellow)" stroke="var(--mp-icon-line)" strokeWidth="2.5" />
-      <path d="M38 22 L40 24 L44 20" stroke="var(--mp-icon-line)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <rect
+        x="20"
+        y="74"
+        width="16"
+        height="4"
+        rx="2"
+        fill="var(--mp-icon-line)"
+      />
+      <circle
+        cx="40"
+        cy="24"
+        r="5"
+        fill="var(--mp-icon-yellow)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="2.5"
+      />
+      <path
+        d="M38 22 L40 24 L44 20"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -366,12 +509,58 @@ export function DocsIcon({ className = '' }: IconProps) {
         stroke="var(--mp-icon-line)"
         strokeWidth="4"
       />
-      <line x1="22" y1="30" x2="52" y2="30" stroke="var(--mp-icon-line)" strokeWidth="3" strokeLinecap="round" />
-      <line x1="22" y1="42" x2="48" y2="42" stroke="var(--mp-icon-teal)" strokeWidth="3" strokeLinecap="round" />
-      <line x1="22" y1="54" x2="44" y2="54" stroke="var(--mp-icon-pink)" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="68" cy="58" r="14" fill="var(--mp-icon-pink)" stroke="var(--mp-icon-line)" strokeWidth="3" />
-      <circle cx="68" cy="58" r="6" fill="none" stroke="var(--mp-icon-line)" strokeWidth="3" />
-      <line x1="72" y1="64" x2="78" y2="72" stroke="var(--mp-icon-line)" strokeWidth="3" strokeLinecap="round" />
+      <line
+        x1="22"
+        y1="30"
+        x2="52"
+        y2="30"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="22"
+        y1="42"
+        x2="48"
+        y2="42"
+        stroke="var(--mp-icon-teal)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="22"
+        y1="54"
+        x2="44"
+        y2="54"
+        stroke="var(--mp-icon-pink)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <circle
+        cx="68"
+        cy="58"
+        r="14"
+        fill="var(--mp-icon-pink)"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+      />
+      <circle
+        cx="68"
+        cy="58"
+        r="6"
+        fill="none"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+      />
+      <line
+        x1="72"
+        y1="64"
+        x2="78"
+        y2="72"
+        stroke="var(--mp-icon-line)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

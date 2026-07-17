@@ -6,7 +6,7 @@ const data = {
   name: pitch.name,
   url: 'https://silashenrique.dev/',
   jobTitle: 'Front-End Developer',
-  sameAs: [pitch.linkedin, pitch.github],
+  sameAs: [pitch.whatsapp, pitch.linkedin, pitch.github],
   email: `mailto:${pitch.email}`,
 } as const;
 

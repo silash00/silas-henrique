@@ -9,5 +9,5 @@ export type LocaleContextType = {
 };
 
 export const LocaleContext = createContext<LocaleContextType | undefined>(
-  undefined,
+  undefined
 );
