@@ -1,10 +1,14 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
-import Layout from '../Layout';
-import ProfileCard from '../components/ProfileCard';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 const LabPage = lazy(() => import('../pages/LabPage'));
+
+const labFallback = (
+  <div className="grid min-h-dvh place-items-center bg-[color:#141414] font-mono text-sm text-white/60">
+    Loading…
+  </div>
+);
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -12,23 +16,15 @@ const AppRoutes = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<ProfileCard />} />
-        </Route>
         <Route
-          path="/lab"
+          path="/"
           element={
-            <Suspense
-              fallback={
-                <div className="grid min-h-dvh place-items-center bg-black font-mono text-sm text-white/60">
-                  Loading lab…
-                </div>
-              }
-            >
+            <Suspense fallback={labFallback}>
               <LabPage />
             </Suspense>
           }
         />
+        <Route path="/lab" element={<Navigate to="/" replace />} />
       </Routes>
     </AnimatePresence>
   );

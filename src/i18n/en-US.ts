@@ -4,22 +4,6 @@ export const enUS = {
   'locale.toggle': 'Language',
   'theme.toggle': 'Theme',
 
-  'root.hello': 'Hello!',
-  'root.intro':
-    "I'm Silas Henrique, a front-end developer with over 4 years of experience building modern, responsive web interfaces.",
-  'root.focusBefore':
-    'I focus on performance, usability, and solid engineering practices. These days I work with',
-  'root.focusAfter':
-    ', building scalable solutions integrated with REST APIs.',
-  'root.design':
-    "I'm also a big design enthusiast — always studying and practicing to sharpen that craft.",
-  'root.contactBefore':
-    'If you liked my work and want to get in touch, feel free to reach me by',
-  'root.contactOr': 'or on',
-  'root.emailLabel': 'E-Mail',
-  'root.linkedinLabel': 'LinkedIn',
-  'root.photoAlt': 'Silas Henrique',
-
   'lab.hero.headline':
     'I build digital products that combine code, automation, and AI to solve real problems — from sites and PWAs to dashboards, integrations, and intelligent workflows.',
   'lab.hero.keyword.digitalProducts': 'Digital Products',

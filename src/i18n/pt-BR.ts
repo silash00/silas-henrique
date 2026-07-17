@@ -2,22 +2,6 @@ export const ptBR = {
   'locale.toggle': 'Idioma',
   'theme.toggle': 'Tema',
 
-  'root.hello': 'Olá!',
-  'root.intro':
-    'Me chamo Silas Henrique, sou desenvolvedor front-end com mais de 4 anos de experiência na criação de interfaces web modernas e responsivas.',
-  'root.focusBefore':
-    'Tenho foco em performance, usabilidade e boas práticas de desenvolvimento. Atualmente, trabalho com',
-  'root.focusAfter':
-    ', construindo soluções escaláveis e integradas com APIs REST.',
-  'root.design':
-    'Além disso, sou um grande fã de design e estou sempre estudando e praticando para melhorar minhas habilidades nessa área.',
-  'root.contactBefore':
-    'Se você gostou do meu trabalho e quer entrar em contato, sinta-se à vontade para me enviar uma mensagem no meu',
-  'root.contactOr': 'ou no',
-  'root.emailLabel': 'E-Mail',
-  'root.linkedinLabel': 'LinkedIn',
-  'root.photoAlt': 'Silas Henrique',
-
   'lab.hero.headline':
     'Desenvolvo produtos digitais que unem código, automação e IA para resolver problemas reais — de sites e PWAs a dashboards, integrações e fluxos inteligentes.',
   'lab.hero.keyword.digitalProducts': 'Produtos Digitais',
