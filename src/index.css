@@ -15,3 +15,226 @@
 body {
   font-family: var(--font-family);
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.lab-memphis) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Lab palette — Neon Orchid */
+.lab-memphis {
+  --mp-bg: #f2f1ef;
+  --mp-ink: #13121a;
+  --mp-surface: #e8e7e4;
+  --mp-accent-a: #b775bf;
+  --mp-accent-b: #6cd9ba;
+  --mp-accent-c: #1e18d9;
+  --mp-pink: var(--mp-accent-a);
+  --mp-teal: var(--mp-accent-b);
+  --mp-yellow: var(--mp-accent-c);
+  --mp-muted: #3f289d;
+  --mp-soft: #6a5a9e;
+  --mp-grid: #d0ceca;
+  --mp-cta-fg: #f2f1ef;
+  --mp-contact-bg: #6cd9ba;
+  --mp-contact-fg: #13121a;
+  --mp-contact-muted: rgb(19 18 26 / 0.75);
+  --mp-contact-soft: rgb(19 18 26 / 0.5);
+  --mp-contact-panel: #3f289d;
+  --mp-contact-panel-fg: #f2f1ef;
+  --mp-icon-line: #13121a;
+  --mp-icon-fill: #f2f1ef;
+  --mp-icon-mark: #13121a;
+  --mp-icon-shadow: rgb(19 18 26 / 0.22);
+  --mp-sticker-a: #b775bf;
+  --mp-sticker-b: #6cd9ba;
+  --mp-sticker-c: #1e18d9;
+  --mp-icon-pink: var(--mp-sticker-a);
+  --mp-icon-teal: var(--mp-sticker-b);
+  --mp-icon-yellow: var(--mp-sticker-c);
+  --mp-works-bg: #ebeae7;
+  --mp-font-display: 'Satoshi', 'Inter', system-ui, sans-serif;
+  --mp-font-accent: 'Satoshi', 'Inter', system-ui, sans-serif;
+  --mp-font-body: 'Inter', system-ui, sans-serif;
+  --mp-font-mono: 'Inter', system-ui, sans-serif;
+  color: var(--mp-ink);
+  background-color: var(--mp-bg);
+  font-family: var(--mp-font-body);
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease;
+}
+
+.dark .lab-memphis {
+  --mp-bg: #141414;
+  --mp-ink: #f2f1ef;
+  --mp-surface: #1e1e1e;
+  --mp-accent-a: #c98fd0;
+  --mp-accent-b: #6cd9ba;
+  --mp-accent-c: #5a54f0;
+  --mp-muted: #c8c0e0;
+  --mp-soft: #9a90b8;
+  --mp-grid: #2e2e2e;
+  --mp-cta-fg: #141414;
+  --mp-contact-bg: #6cd9ba;
+  --mp-contact-fg: #13121a;
+  --mp-contact-muted: rgb(19 18 26 / 0.78);
+  --mp-contact-soft: rgb(19 18 26 / 0.55);
+  --mp-contact-panel: #3f289d;
+  --mp-contact-panel-fg: #f2f1ef;
+  --mp-icon-line: #13121a;
+  --mp-icon-fill: #f2f1ef;
+  --mp-icon-mark: #13121a;
+  --mp-icon-shadow: rgb(0 0 0 / 0.55);
+  --mp-sticker-a: #b775bf;
+  --mp-sticker-b: #6cd9ba;
+  --mp-sticker-c: #1e18d9;
+  --mp-works-bg: #1a1a1a;
+}
+
+.lab-memphis .mp-font-display {
+  font-family: var(--mp-font-display);
+}
+
+.lab-memphis .mp-font-accent {
+  font-family: var(--mp-font-accent);
+}
+
+.lab-memphis .mp-font-body {
+  font-family: var(--mp-font-body);
+}
+
+.lab-memphis .font-mono {
+  font-family: var(--mp-font-mono);
+}
+
+.lab-memphis ::selection {
+  background-color: color-mix(in srgb, var(--mp-teal) 72%, var(--mp-ink));
+  color: var(--mp-bg);
+}
+
+.lab-memphis ::-moz-selection {
+  background-color: color-mix(in srgb, var(--mp-teal) 72%, var(--mp-ink));
+  color: var(--mp-bg);
+}
+
+/* Click: swap accent roles on a floater */
+.lab-memphis .mp-flipped {
+  --mp-pink: var(--mp-accent-b);
+  --mp-teal: var(--mp-accent-a);
+  --mp-icon-pink: var(--mp-sticker-b);
+  --mp-icon-teal: var(--mp-sticker-a);
+}
+
+/* Works section — warmer paper + grain + soft color wash */
+.lab-memphis .mp-works-texture {
+  background-color: var(--mp-works-bg);
+  background-image:
+    radial-gradient(
+      ellipse 85% 55% at 8% 12%,
+      color-mix(in srgb, var(--mp-teal) 14%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 75% 50% at 92% 88%,
+      color-mix(in srgb, var(--mp-yellow) 16%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 70% 18%,
+      color-mix(in srgb, var(--mp-pink) 8%, transparent),
+      transparent 55%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      color-mix(in srgb, var(--mp-ink) 2.5%, transparent) 3px,
+      color-mix(in srgb, var(--mp-ink) 2.5%, transparent) 4px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  background-blend-mode: normal, normal, normal, multiply, soft-light;
+  opacity: 1;
+}
+
+.dark .lab-memphis .mp-works-texture {
+  background-blend-mode: screen, screen, screen, normal, soft-light;
+  background-image:
+    radial-gradient(
+      ellipse 85% 55% at 8% 12%,
+      color-mix(in srgb, var(--mp-teal) 18%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 75% 50% at 92% 88%,
+      color-mix(in srgb, var(--mp-yellow) 14%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 70% 18%,
+      color-mix(in srgb, var(--mp-pink) 10%, transparent),
+      transparent 55%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      color-mix(in srgb, var(--mp-ink) 4%, transparent) 3px,
+      color-mix(in srgb, var(--mp-ink) 4%, transparent) 4px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+}
+
+/* Contact — soft lateral hatch, fades into the slab */
+.lab-memphis .mp-contact-side {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--mp-contact-fg) 10%, transparent) 0 1px,
+      transparent 1px 18px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 11px,
+      color-mix(in srgb, var(--mp-contact-fg) 5%, transparent) 11px,
+      color-mix(in srgb, var(--mp-contact-fg) 5%, transparent) 12px
+    );
+  mask-image: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 0.55) 0%,
+    rgb(0 0 0 / 0.22) 18%,
+    transparent 38%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 0.55) 0%,
+    rgb(0 0 0 / 0.22) 18%,
+    transparent 38%
+  );
+}
+
+/* Short glitch on tap — applied to inner icon wrapper */
+.lab-memphis .mp-glitch {
+  animation: mp-glitch 280ms steps(2, end);
+}
+
+@keyframes mp-glitch {
+  0% {
+    translate: 0 0;
+    filter: none;
+  }
+  25% {
+    translate: 3px -2px;
+    filter: hue-rotate(40deg) saturate(1.4);
+  }
+  50% {
+    translate: -3px 2px;
+    filter: hue-rotate(-30deg);
+  }
+  100% {
+    translate: 0 0;
+    filter: none;
+  }
+}
