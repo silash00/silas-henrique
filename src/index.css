@@ -234,6 +234,45 @@ body {
 }
 
 /* Short glitch on tap — applied to inner icon wrapper */
+@media (prefers-reduced-motion: no-preference) {
+  .memphis .mp-ph-line,
+  .memphis .mp-ph-bar {
+    animation: mp-ph-pulse 1.8s ease-in-out infinite;
+  }
+
+  .memphis .mp-ph-tile {
+    animation: mp-ph-pulse 2.2s ease-in-out infinite;
+  }
+
+  .memphis .mp-ph-block {
+    animation: mp-ph-pulse 2s ease-in-out infinite;
+  }
+
+  .memphis .mp-ph-bar-chart {
+    animation: mp-ph-grow 1.6s ease-in-out infinite alternate;
+    transform-origin: bottom;
+  }
+}
+
+@keyframes mp-ph-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes mp-ph-grow {
+  from {
+    transform: scaleY(0.72);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
 .memphis .mp-glitch {
   animation: mp-glitch 280ms steps(2, end);
 }

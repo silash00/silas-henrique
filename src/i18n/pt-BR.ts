@@ -23,9 +23,21 @@ export const ptBR = {
   'works.intro':
     'Seleção de interfaces que desenhei e implementei — prints e cases em breve.',
   'works.trips.blurb': 'Busca e listagem com foco em performance.',
+  'works.trips.detail':
+    'Interface de busca e listagem de viagens com foco em performance percebida: resultados rápidos, estados de loading claros e hierarquia visual que ajuda a comparar opções sem ruído.',
   'works.checkout.blurb': 'Fluxo crítico: estados e acessibilidade.',
+  'works.checkout.detail':
+    'Fluxo de checkout tratado como caminho crítico — estados de erro/sucesso explícitos, teclado e leitores de tela no radar, e componentes reutilizáveis alinhados ao design system.',
   'works.landing.blurb': 'Hierarquia forte, motion contido.',
+  'works.landing.detail':
+    'Landing com hierarquia tipográfica forte e motion contido: uma composição por seção, CTA óbvio e ritmo visual que guia o scroll sem distrair do produto.',
   'works.tools.blurb': 'Ferramenta interna do time.',
+  'works.tools.detail':
+    'Ferramenta interna para o time operacional — UI densa mas legível, atalhos para tarefas repetidas e feedback imediato nas ações que importam no dia a dia.',
+  'works.cta.linkedin': 'Ver no LinkedIn →',
+  'works.cta.email': 'Falar sobre este projeto →',
+  'works.modal.close': 'Fechar',
+  'works.modal.open': 'Abrir detalhes do projeto',
 
   'contact.title': 'Vamos conversar.',
   'contact.intro':

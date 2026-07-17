@@ -25,9 +25,21 @@ export const enUS = {
   'works.intro':
     'A selection of interfaces I designed and built — prints and case studies coming soon.',
   'works.trips.blurb': 'Search and listing with a performance focus.',
+  'works.trips.detail':
+    'Travel search and listing UI focused on perceived performance: fast results, clear loading states, and a visual hierarchy that makes comparing options easy without noise.',
   'works.checkout.blurb': 'Critical flow: states and accessibility.',
+  'works.checkout.detail':
+    'Checkout treated as a critical path — explicit error/success states, keyboard and screen-reader support in mind, and reusable components aligned to the design system.',
   'works.landing.blurb': 'Strong hierarchy, restrained motion.',
+  'works.landing.detail':
+    'Landing with strong type hierarchy and restrained motion: one job per section, an obvious CTA, and a scroll rhythm that guides without distracting from the product.',
   'works.tools.blurb': 'Internal tool for the team.',
+  'works.tools.detail':
+    'Internal tool for the ops team — dense but readable UI, shortcuts for repetitive tasks, and immediate feedback on the actions that matter day to day.',
+  'works.cta.linkedin': 'View on LinkedIn →',
+  'works.cta.email': 'Talk about this project →',
+  'works.modal.close': 'Close',
+  'works.modal.open': 'Open project details',
 
   'contact.title': "Let's talk.",
   'contact.intro':

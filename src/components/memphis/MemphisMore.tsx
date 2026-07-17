@@ -1,56 +1,17 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import MacWindow from './MacWindow';
 import SectionContainer from './SectionContainer';
-import { pitch } from '../../data/pitch';
+import WorkDetailModal from './WorkDetailModal';
+import { WORKS } from '../../data/works';
 import { useT } from '../../i18n/useT';
-import type { MessageKey } from '../../i18n';
-
-const WORKS = [
-  {
-    id: 'trips',
-    title: 'busca.trips.app',
-    blurbKey: 'works.trips.blurb' satisfies MessageKey,
-    tags: 'React · Next',
-    href: pitch.linkedin,
-    accent: 'teal' as const,
-    rotate: '-rotate-2',
-    z: 'z-10',
-  },
-  {
-    id: 'checkout',
-    title: 'checkout.flow',
-    blurbKey: 'works.checkout.blurb' satisfies MessageKey,
-    tags: 'TypeScript',
-    href: pitch.linkedin,
-    accent: 'pink' as const,
-    rotate: 'rotate-2',
-    z: 'z-20',
-  },
-  {
-    id: 'landing',
-    title: 'brand.landing',
-    blurbKey: 'works.landing.blurb' satisfies MessageKey,
-    tags: 'Front-end',
-    href: pitch.linkedin,
-    accent: 'yellow' as const,
-    rotate: '-rotate-1',
-    z: 'z-[15]',
-  },
-  {
-    id: 'tools',
-    title: 'ops.internal',
-    blurbKey: 'works.tools.blurb' satisfies MessageKey,
-    tags: 'Product UI',
-    href: `mailto:${pitch.email}`,
-    accent: 'teal' as const,
-    rotate: 'rotate-1',
-    z: 'z-[25]',
-  },
-] as const;
 
 export default function MemphisMore() {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const t = useT();
+
+  const selected = WORKS.find((w) => w.id === selectedId) ?? null;
 
   return (
     <section
@@ -87,16 +48,28 @@ export default function MemphisMore() {
           >
             <MacWindow
               title={work.title}
-              href={work.href}
               blurb={t(work.blurbKey)}
               tags={work.tags}
               accent={work.accent}
+              openLabel={`${t('works.modal.open')}: ${work.title}`}
+              onOpen={() => {
+                openerRef.current = document.activeElement as HTMLElement;
+                setSelectedId(work.id);
+              }}
               draggable
               onDragStart={() => setActiveId(work.id)}
             />
           </div>
         ))}
       </div>
+
+      <WorkDetailModal
+        work={selected}
+        onClose={() => {
+          setSelectedId(null);
+          queueMicrotask(() => openerRef.current?.focus?.());
+        }}
+      />
     </section>
   );
 }
