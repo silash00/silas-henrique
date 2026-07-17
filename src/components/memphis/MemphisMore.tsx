@@ -48,17 +48,30 @@ export default function MemphisMore() {
           >
             <MacWindow
               title={work.title}
+              headline={t(work.nameKey)}
               blurb={t(work.blurbKey)}
               tags={work.tags}
               accent={work.accent}
-              openLabel={`${t('works.modal.open')}: ${work.title}`}
+              openLabel={`${t('works.modal.open')}: ${t(work.nameKey)}`}
               onOpen={() => {
                 openerRef.current = document.activeElement as HTMLElement;
                 setSelectedId(work.id);
               }}
               draggable
               onDragStart={() => setActiveId(work.id)}
-            />
+            >
+              {work.media ? (
+                <img
+                  className="h-full w-full object-cover"
+                  src={work.media.thumb}
+                  alt={t(work.media.altKey ?? work.nameKey)}
+                  loading="lazy"
+                  decoding="async"
+                  width={704}
+                  height={440}
+                />
+              ) : undefined}
+            </MacWindow>
           </div>
         ))}
       </div>

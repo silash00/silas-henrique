@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 import type { WorkAccent } from '../../data/works';
 
 type MacWindowProps = {
   title: string;
+  headline: string;
   blurb: string;
   tags: string;
   openLabel: string;
@@ -24,8 +25,12 @@ const ACCENT = {
   yellow: 'var(--mp-yellow)',
 } as const;
 
+/** Tailwind `md` — drag only on desktop so touch scroll stays free. */
+const DESKTOP_DRAG_MQ = '(min-width: 768px)';
+
 export default function MacWindow({
   title,
+  headline,
   blurb,
   tags,
   openLabel,
@@ -38,15 +43,24 @@ export default function MacWindow({
   onDragStart,
 }: MacWindowProps) {
   const reduced = usePrefersReducedMotion();
+  const [isDesktop, setIsDesktop] = useState(false);
   const [dragging, setDragging] = useState(false);
   const moved = useRef(false);
-  const canDrag = draggable && !reduced;
+  const canDrag = draggable && !reduced && isDesktop;
+
+  useEffect(() => {
+    const mq = window.matchMedia(DESKTOP_DRAG_MQ);
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   return (
     <motion.div
-      className={`relative w-full origin-center touch-none md:w-[22rem] ${
-        canDrag ? (dragging ? 'cursor-grabbing' : 'cursor-grab') : ''
-      } ${className}`}
+      className={`relative w-full origin-center md:w-[22rem] ${
+        canDrag ? 'touch-none' : ''
+      } ${canDrag ? (dragging ? 'cursor-grabbing' : 'cursor-grab') : ''} ${className}`}
       style={style}
       drag={canDrag}
       dragMomentum={canDrag}
@@ -106,7 +120,10 @@ export default function MacWindow({
           <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-[color:var(--mp-soft)]">
             {tags}
           </p>
-          <p className="mt-1 text-sm leading-snug text-[color:var(--mp-muted)]">
+          <p className="mt-1.5 text-sm font-semibold leading-snug text-[color:var(--mp-ink)]">
+            {headline}
+          </p>
+          <p className="mt-1 line-clamp-3 text-sm leading-snug text-[color:var(--mp-muted)]">
             {blurb}
           </p>
         </div>

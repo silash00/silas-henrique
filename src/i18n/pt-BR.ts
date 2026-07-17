@@ -21,21 +21,39 @@ export const ptBR = {
 
   'works.title': 'Trabalhos recentes',
   'works.intro':
-    'Seleção de interfaces que desenhei e implementei — prints e cases em breve.',
-  'works.trips.blurb': 'Busca e listagem com foco em performance.',
-  'works.trips.detail':
-    'Interface de busca e listagem de viagens com foco em performance percebida: resultados rápidos, estados de loading claros e hierarquia visual que ajuda a comparar opções sem ruído.',
-  'works.checkout.blurb': 'Fluxo crítico: estados e acessibilidade.',
-  'works.checkout.detail':
-    'Fluxo de checkout tratado como caminho crítico — estados de erro/sucesso explícitos, teclado e leitores de tela no radar, e componentes reutilizáveis alinhados ao design system.',
-  'works.landing.blurb': 'Hierarquia forte, motion contido.',
-  'works.landing.detail':
-    'Landing com hierarquia tipográfica forte e motion contido: uma composição por seção, CTA óbvio e ritmo visual que guia o scroll sem distrair do produto.',
-  'works.tools.blurb': 'Ferramenta interna do time.',
-  'works.tools.detail':
-    'Ferramenta interna para o time operacional — UI densa mas legível, atalhos para tarefas repetidas e feedback imediato nas ações que importam no dia a dia.',
+    'Projetos que nasceram de problemas reais e foram transformados em soluções digitais.',
+
+  'works.loop.name':
+    'loöp — Site institucional para agência criativa',
+  'works.loop.blurb':
+    'Uma vitrine digital à altura de uma agência criativa: rápida, fluida e totalmente editável sem tocar em código.',
+  'works.loop.detail':
+    'Site institucional da agência loöp como experiência headless: a equipe monta páginas com blocos reutilizáveis (slices), publica na hora e mantém identidade forte com motion, Lottie e carrosséis — com preview, revalidação via webhook, SEO e OpenGraph desde a base.',
+
+  'works.essencia.name':
+    'Essência Burguer — Plataforma de pedidos para evento beneficente',
+  'works.essencia.blurb':
+    'Transformei a venda manual de um evento de igreja em um fluxo de pedido completo, com pagamento PIX e organização automática — feito para o voluntário e para o cliente.',
+  'works.essencia.detail':
+    'Aplicação de pedidos para ação beneficente: fluxo em etapas com validação, PIX Copia e Cola gerado no app (BR Code EMV), endereço via CEP, entrega/retirada e registro automático em planilha com confirmação no WhatsApp — menos erro, mais tempo para os voluntários.',
+
+  'works.icp.name':
+    'ICP Store — Vitrine de produtos com checkout via WhatsApp',
+  'works.icp.blurb':
+    'Uma loja onde vender é conversar: o cliente desliza pelos produtos e, com um toque, já está falando com o vendedor no WhatsApp.',
+  'works.icp.detail':
+    'Vitrine para marca de moda cristã sem carrinho burocrático: carrossel em tela cheia, filtro por categoria, links compartilháveis por produto e o botão “Quero esse!” abrindo o WhatsApp com a mensagem pronta — do interesse à conversa em um toque.',
+
+  'works.jd.name':
+    'JD Ergonomia — Landing page de consultoria em ergonomia',
+  'works.jd.blurb':
+    'Uma página que traduz credibilidade técnica em confiança — e transforma visitante em lead qualificado.',
+  'works.jd.detail':
+    'Landing de consultoria em ergonomia ocupacional: narrativa de conversão (serviços, benefícios, depoimentos, contato), autoridade com base em NR-01/NR-17 e formulário que persiste leads no backend com feedback em tempo real — design responsivo e revelações no scroll.',
+
   'works.cta.linkedin': 'Ver no LinkedIn →',
   'works.cta.email': 'Falar sobre este projeto →',
+  'works.cta.live': 'Ver projeto →',
   'works.modal.close': 'Fechar',
   'works.modal.open': 'Abrir detalhes do projeto',
 
