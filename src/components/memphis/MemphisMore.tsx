@@ -18,7 +18,10 @@ export default function MemphisMore() {
       id="memphis-more"
       className="relative overflow-visible border-t border-[color:var(--mp-grid)] text-[color:var(--mp-ink)]"
     >
-      <div aria-hidden className="mp-works-texture pointer-events-none absolute inset-0" />
+      <div
+        aria-hidden
+        className="mp-works-texture pointer-events-none absolute inset-0"
+      />
       <SectionContainer className="relative z-10 pt-14 md:pt-20">
         <h2 className="mp-font-display max-w-[14ch] text-[clamp(2.25rem,6vw,4rem)] font-bold leading-[0.92] tracking-tight">
           {t('works.title')}

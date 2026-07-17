@@ -11,7 +11,7 @@ export const messages: Record<Locale, Messages> = {
 };
 
 export function resolveLocaleFromNavigator(
-  language = typeof navigator !== 'undefined' ? navigator.language : 'pt-BR',
+  language = typeof navigator !== 'undefined' ? navigator.language : 'pt-BR'
 ): Locale {
   return language.toLowerCase().startsWith('en') ? 'en-US' : 'pt-BR';
 }

@@ -23,8 +23,7 @@ export const ptBR = {
   'works.intro':
     'Projetos que nasceram de problemas reais e foram transformados em soluções digitais.',
 
-  'works.loop.name':
-    'loöp — Site institucional para agência criativa',
+  'works.loop.name': 'loöp — Site institucional para agência criativa',
   'works.loop.blurb':
     'Uma vitrine digital à altura de uma agência criativa: rápida, fluida e totalmente editável sem tocar em código.',
   'works.loop.detail':
@@ -37,15 +36,13 @@ export const ptBR = {
   'works.essencia.detail':
     'Aplicação de pedidos para ação beneficente: fluxo em etapas com validação, PIX Copia e Cola gerado no app (BR Code EMV), endereço via CEP, entrega/retirada e registro automático em planilha com confirmação no WhatsApp — menos erro, mais tempo para os voluntários.',
 
-  'works.icp.name':
-    'ICP Store — Vitrine de produtos com checkout via WhatsApp',
+  'works.icp.name': 'ICP Store — Vitrine de produtos com checkout via WhatsApp',
   'works.icp.blurb':
     'Uma loja onde vender é conversar: o cliente desliza pelos produtos e, com um toque, já está falando com o vendedor no WhatsApp.',
   'works.icp.detail':
     'Vitrine para marca de moda cristã sem carrinho burocrático: carrossel em tela cheia, filtro por categoria, links compartilháveis por produto e o botão “Quero esse!” abrindo o WhatsApp com a mensagem pronta — do interesse à conversa em um toque.',
 
-  'works.jd.name':
-    'JD Ergonomia — Landing page de consultoria em ergonomia',
+  'works.jd.name': 'JD Ergonomia — Landing page de consultoria em ergonomia',
   'works.jd.blurb':
     'Uma página que traduz credibilidade técnica em confiança — e transforma visitante em lead qualificado.',
   'works.jd.detail':

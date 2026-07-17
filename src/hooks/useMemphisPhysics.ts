@@ -107,7 +107,7 @@ export function useMemphisPhysics(
   containerRef: React.RefObject<HTMLElement | null>,
   nameRef: React.RefObject<HTMLElement | null>,
   spawns: readonly FloaterSpawn[],
-  enabled: boolean,
+  enabled: boolean
 ): PhysicsApi {
   const [bodies, setBodies] = useState<BodyState[]>([]);
   const [trails, setTrails] = useState<TrailGhost[]>([]);
@@ -155,7 +155,13 @@ export function useMemphisPhysics(
       const isMobile = rect.width < 768;
       const next = spawns.map((s) => {
         const w = sizePx(rect, s.size);
-        const h = w * (s.id === 'braces' ? 0.85 : s.id === 'browser' || s.id === 'terminal' || s.id === 'node' ? 0.72 : 1);
+        const h =
+          w *
+          (s.id === 'braces'
+            ? 0.85
+            : s.id === 'browser' || s.id === 'terminal' || s.id === 'node'
+              ? 0.72
+              : 1);
         const existing = bodiesRef.current.find((b) => b.id === s.id);
         // Keep drag positions after interaction; otherwise re-seed on resize/breakpoint
         if (existing && booted.current && hasInteracted.current) {
@@ -326,9 +332,7 @@ export function useMemphisPhysics(
       body.vy = ((y - drag.lastY) / dt) * 16.67 * THROW;
       body.x = Math.min(Math.max(0, x), rect.width - body.w);
       body.y = Math.min(Math.max(0, y), rect.height - body.h);
-      if (
-        Math.hypot(e.clientX - drag.startX, e.clientY - drag.startY) > 6
-      ) {
+      if (Math.hypot(e.clientX - drag.startX, e.clientY - drag.startY) > 6) {
         drag.moved = true;
         window.clearTimeout(drag.holdTimer);
         body.holding = false;
@@ -403,7 +407,7 @@ export function useMemphisPhysics(
       };
       (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
     },
-    [containerRef, enabled],
+    [containerRef, enabled]
   );
 
   return { bodies, trails, easterEgg, dismissEgg, onPointerDown };

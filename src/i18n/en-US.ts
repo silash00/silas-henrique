@@ -25,8 +25,7 @@ export const enUS = {
   'works.intro':
     'Projects born from real problems and turned into digital solutions.',
 
-  'works.loop.name':
-    'loöp — Institutional site for a creative agency',
+  'works.loop.name': 'loöp — Institutional site for a creative agency',
   'works.loop.blurb':
     'A digital showcase worthy of a creative agency: fast, fluid, and fully editable without touching code.',
   'works.loop.detail':
@@ -39,15 +38,13 @@ export const enUS = {
   'works.essencia.detail':
     'Custom ordering app for a charity action: stepped flow with validation, PIX copy-and-paste generated in-app (BR Code EMV), address lookup by ZIP, delivery/pickup windows, and automatic spreadsheet logging with WhatsApp confirmation — fewer mistakes, more time for volunteers.',
 
-  'works.icp.name':
-    'ICP Store — Product showcase with WhatsApp checkout',
+  'works.icp.name': 'ICP Store — Product showcase with WhatsApp checkout',
   'works.icp.blurb':
     'A store where selling is a conversation: the customer swipes through products and, with one tap, is already talking to the seller on WhatsApp.',
   'works.icp.detail':
     'Digital storefront for a Christian fashion brand without a bureaucratic cart: full-screen carousel, category filters, shareable product links, and a “I want this!” button that opens WhatsApp with the message ready — from interest to conversation in one tap.',
 
-  'works.jd.name':
-    'JD Ergonomics — Landing page for an ergonomics consultancy',
+  'works.jd.name': 'JD Ergonomics — Landing page for an ergonomics consultancy',
   'works.jd.blurb':
     'A page that turns technical credibility into trust — and visitors into qualified leads.',
   'works.jd.detail':
@@ -60,8 +57,7 @@ export const enUS = {
   'works.modal.open': 'Open project details',
 
   'contact.title': "Let's talk.",
-  'contact.intro':
-    'The best projects almost always start with a conversation.',
+  'contact.intro': 'The best projects almost always start with a conversation.',
   'contact.introMore':
     'If you have an idea, a challenge, or just want to swap notes about tech, I’d be happy to hear from you.',
   'contact.write': 'Send an email →',

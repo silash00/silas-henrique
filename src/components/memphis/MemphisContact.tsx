@@ -13,7 +13,10 @@ export default function MemphisContact() {
       id="memphis-contact"
       className="relative overflow-hidden border-t border-[color:var(--mp-contact-fg)]/20 bg-[color:var(--mp-contact-bg)] py-16 text-[color:var(--mp-contact-fg)] md:py-24"
     >
-      <div aria-hidden className="mp-contact-side pointer-events-none absolute inset-0" />
+      <div
+        aria-hidden
+        className="mp-contact-side pointer-events-none absolute inset-0"
+      />
       <p
         aria-hidden
         className="mp-font-display pointer-events-none absolute -bottom-6 -right-2 select-none text-[min(42vw,14rem)] font-bold leading-none tracking-tighter text-[color:var(--mp-contact-fg)]/[0.08] md:-bottom-10 md:right-8"
@@ -45,6 +48,14 @@ export default function MemphisContact() {
                 {t('contact.also')}
               </p>
               <div className="flex flex-wrap gap-3">
+                <a
+                  href={pitch.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={btnClass}
+                >
+                  WhatsApp ↗
+                </a>
                 <a
                   href={pitch.linkedin}
                   target="_blank"
